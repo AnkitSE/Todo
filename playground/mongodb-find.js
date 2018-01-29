@@ -11,7 +11,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApps',(err,db)=>
     console.log('Connection is successful  : '+typeof(db));
 
     db.collection('Todos').find({
-      _id : new ObjectID('5a6ab08db62e9e04c871d453')
+    text : 'Something'
     }).toArray().then((doc)=>{
       console.log(JSON.stringify(doc,undefined,2));
     },(err)=>{
